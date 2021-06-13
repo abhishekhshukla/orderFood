@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link     href="../bootstrap/bootstrap.css"  type="text/css" rel="stylesheet" media="screen">
+  <script  defer src="../bootstrap/jquery.js"></script>
+  <script  defer src="../bootstrap/popper.js"></script>
+  <script  defer src="../bootstrap/bootstrap.js"></script>
+  <script defer src="../components/navbar.js"></script>
+</head>
+<body>
+  
+  <div id="navbar"></div>
+  <form action='/login' method="post"  style="margin-top: 2vh;">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" name="username" value="abcd@gmail.com" placeholder="abcd@gmail.com" aria-describedby="emailHelp">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1"  >Password</label>
+      <input type="password" name="password" value="234234234" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</body>
+</html>

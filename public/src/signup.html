@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+
+    <link     href="../bootstrap/bootstrap.css"  type="text/css" rel="stylesheet" media="screen">
+    <script  defer src="../bootstrap/jquery.js"></script>
+    <script  defer src="../bootstrap/popper.js"></script>
+    <script  defer src="../bootstrap/bootstrap.js"></script>
+    <script defer src="../components/navbar.js"></script>
+
+</head>
+<body>
+    
+    <div id="navbar"></div>
+    <div style="display:flex; justify-content: center; margin-top: 2%;">
+    <form action="/signup" method="post">
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" name="name" placeholder="Name">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" name="username"  placeholder="Email" aria-describedby="emailHelp">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1"  >Password</label>
+        <input type="password" name="password" placeholder="Password" class="form-control" id="exampleInputPassword1">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+       </div>
+</body>
+</html>

@@ -1,3 +1,13 @@
+<script defer>
+  $(document).ready(()=>{
+    $('#Login').click(()=>{
+        $.get('/login',(data,status)=>{
+                   $('#login').load('/login.html')
+                   console.log(status)
+        })
+    })
+})
+</script>
 <nav class="navbar navbar-expand-lg  navbar-dark " style="background-color:#7952b3;">
     <a class="navbar-brand" href="#">
       <img src="../src/logo1.png" width="60" height="30" alt="">
@@ -9,11 +19,15 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" id='Login'>Login</a>
+          <a class="nav-link" href="/login" id='Login'>Login</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/signup">SignUp</a>
+        </li>
+
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Dropdown

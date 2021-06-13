@@ -5,8 +5,3 @@ $(()=>{
 
 
 })
-$(document).ready(()=>{
-    $('#Login').click(()=>{
-        $('#login').load()
-    })
-})
