@@ -34,8 +34,7 @@ app.post('/signup',async (req,res)=>{
 app.use('/login',express.static(__dirname+'/public/src/login.html'))
 
 app.get('/logI',(req,res)=>{
-    console.log("DONR")
-  //  res.send("DONE");
+   
     if(!req.session.user)
        res.redirect('/login')
     res.redirect('/logedin')
