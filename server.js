@@ -25,12 +25,30 @@ app.post('/signup',async (req,res)=>{
          username:req.body.username,
          password:req.body.password
      })
+     req.session.user=await user.username;
+     console.log(req.session.user)
      res.status('201').send(`user created with ${user.id}`);
     }
 })
 
 app.use('/login',express.static(__dirname+'/public/src/login.html'))
 
+app.get('/logI',(req,res)=>{
+    console.log("DONR")
+  //  res.send("DONE");
+    if(!req.session.user)
+       res.redirect('/login')
+    res.redirect('/logedin')
+    
+
+})
+
+app.get('/logout',(req,res)=>{
+    req.session.destroy();
+    res.redirect('/')
+})
+
+app.use('/logedin',express.static(__dirname+'/public/src/logedin.html'))
 
 app.post('/login',async (req,res)=>{
               
@@ -43,7 +61,9 @@ app.post('/login',async (req,res)=>{
     //    {
     //        res.status('401').send("Invalid Password")
     //    }
-    res.redirect('/')
+    req.session.user=await user.username;
+    console.log(req.session.user)
+    res.redirect('/logedin')
 })
 
 app.use('/',express.static(__dirname+'/public'))
